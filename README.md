@@ -1,6 +1,6 @@
 # CO₂ Clock - Real-Time Carbon Tracker
 
-![CO₂ Clock Mockup](assets/images/mockup.png)
+![CO₂ Clock Mockup](assets/images/mockup.webp)
 
 **[View Live Website](https://boneyphilip.github.io/duplicate-co2clock/)**
 
@@ -94,21 +94,21 @@ The website features a complete user journey including a homepage with CO₂ sim
 ## Features
 
 ### Real-Time CO₂ Tracker
-![CO₂ Display](assets/images/co2-display.png)
+![CO₂ Display](assets/images/co2-display.webp)
 - **Simulated atmospheric CO₂ levels** displayed with animated digit counters
 - **Incremental updates** using JavaScript to simulate real-time changes
 - **Educational baseline** showing current approximate atmospheric levels
 - This feature helps users visualize the scale of current CO₂ concentrations
 
 ### Interactive Navigation
-![Navigation](assets/images/navigation.png)
+![Navigation](assets/images/navigation.webp)
 - **Responsive navigation bar** that works across all devices
 - **Smooth scrolling** between sections for improved user experience
 - **Active page indicators** to help users understand their current location
 - **Mobile-friendly** hamburger menu for smaller screens
 
 ### Global Emissions Dashboard
-![Dashboard](assets/images/dashboard.png)
+![Dashboard](assets/images/dashboard.webp)
 - **Country-by-country emissions data** with interactive charts
 - **Top 20 emitters visualization** with multiple viewing options (total, per capita, percentage)
 - **Search and filter functionality** for exploring specific countries
@@ -116,7 +116,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - This comprehensive dashboard allows users to understand global emission patterns
 
 ### Climate Impact Facts
-![Climate Facts](assets/images/climate-facts.png)
+![Climate Facts](assets/images/climate-facts.webp)
 - **Key climate statistics** presented in digestible format
 - **Temperature rise data** with historical context
 - **Sea level rise information** and projections
@@ -124,7 +124,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - Educational content helps users understand the broader implications of rising CO₂
 
 ### Interactive Charts and Visualizations
-![Charts](assets/images/charts.png)
+![Charts](assets/images/charts.webp)
 - **Dynamic bar charts** showing emissions by country
 - **Multiple chart views** (total emissions, per capita, global percentage)
 - **Hover tooltips** providing detailed information
@@ -132,7 +132,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - Charts are powered by Chart.js for smooth, interactive experiences
 
 ### Climate Solutions Section
-![Solutions](assets/images/solutions.png)
+![Solutions](assets/images/solutions.webp)
 - **Renewable energy information** with current statistics
 - **Forest conservation data** and potential impact
 - **Actionable solutions** that individuals and organizations can implement
@@ -140,7 +140,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - This section provides hope and practical steps for addressing climate change
 
 ### Educational Articles Hub
-![Articles](assets/images/articles.png)
+![Articles](assets/images/articles.webp)
 - **Curated climate science articles** covering key topics
 - **CO₂ trends analysis** with historical data
 - **Earth system science** explanations
@@ -148,7 +148,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - Articles are designed to educate users about the science behind climate change
 
 ### Contact and Engagement
-![Contact](assets/images/contact.png)
+![Contact](assets/images/contact.webp)
 - **Contact form** powered by FormSubmit for user inquiries
 - **Thank you page** with confirmation message and navigation options
 - **Social media integration** for community building
@@ -156,7 +156,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - **GitHub integration** for open-source contributions
 
 ### Thank You Page
-![Thank You](assets/images/thank-you.png)
+![Thank You](assets/images/thank-you.webp)
 - **Form submission confirmation** with friendly eco-themed design
 - **Clear success messaging** to reassure users their message was sent
 - **Navigation options** to return to main site or explore articles
@@ -164,7 +164,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 - **User-friendly redirect** after successful contact form submission
 
 ### Responsive Design
-![Responsive](assets/images/responsive.png)
+![Responsive](assets/images/responsive.webp)
 - **Mobile-first approach** ensuring great experience on all devices
 - **Flexible layouts** that adapt to different screen sizes
 - **Touch-friendly interfaces** for mobile users
@@ -321,7 +321,7 @@ cd duplicate-co2clock
 
 ### Media
 - **Hero video** - CO₂ emissions visualization (royalty-free)
-- **Climate images** - Unsplash and Pexels (credited in alt text)
+- **Climate images** - Unsplash and Pexels (credited in alt text), chatgpt
 - **Icons** - Font Awesome 6.0+ icon library
 - **Flags** - FlagCDN for country flag images
 
