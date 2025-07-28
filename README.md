@@ -1,6 +1,6 @@
 # CO₂ Clock - Real-Time Carbon Tracker
 
-![CO₂ Clock Mockup](assets/images/mockup.png)
+![CO₂ Clock Mockup](assets/images/mockup.webp)
 
 **[View Live Website](https://boneyphilip.github.io/duplicate-co2clock/)**
 
