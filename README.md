@@ -238,7 +238,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 ### Accessibility Testing
 ![Lighthouse Accessibility](assets/images/lighthouse-accessibility.webp)
 - **WAVE Web Accessibility Evaluator** - No errors detected
-- **Lighthouse Accessibility Score** - 95+ on all pages
+- **Lighthouse Accessibility Score** - 90+ on all pages
 - **Keyboard navigation** - All interactive elements accessible via keyboard
 - **Screen reader compatibility** - Tested with NVDA and VoiceOver
 
