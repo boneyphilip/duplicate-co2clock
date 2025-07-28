@@ -1,6 +1,6 @@
 # CO₂ Clock - Real-Time Carbon Tracker
 
-![CO₂ Clock Mockup](assets/images/mockup.webp)
+![CO₂ Clock Mockup](assets/images/mockup.png)
 
 **[View Live Website](https://boneyphilip.github.io/duplicate-co2clock/)**
 
@@ -201,6 +201,15 @@ The website features a complete user journey including a homepage with CO₂ sim
 
 ## Testing
 
+### Website Performance Metrics
+![Lighthouse Audit](assets/images/lighthouse-audit-full.webp)
+
+**Overall Lighthouse Scores:**
+- 🚀 **Performance**: 90+ (Fast loading, optimized resources)
+- ♿ **Accessibility**: 95+ (Screen reader friendly, keyboard navigation)
+- 🔍 **SEO**: 95+ (Search engine optimized)
+- ✅ **Best Practices**: 90+ (Security, modern web standards)
+
 ### Validator Testing
 
 #### HTML
@@ -219,17 +228,19 @@ The website features a complete user journey including a homepage with CO₂ sim
 - Data arrays properly structured and accessible
 - Interactive functions work smoothly across all browsers
 
-### Accessibility Testing
-- **WAVE Web Accessibility Evaluator** - No errors detected
-- **Lighthouse Accessibility Score** - 95+ on all pages
-- **Keyboard navigation** - All interactive elements accessible via keyboard
-- **Screen reader compatibility** - Tested with NVDA and VoiceOver
-
 ### Performance Testing
+![Lighthouse Performance](assets/images/lighthouse-performance.webp)
 - **Lighthouse Performance Score** - 90+ on all pages
 - **PageSpeed Insights** - Optimized for both mobile and desktop
 - **Image optimization** - WebP format used where supported
 - **Code minification** - CSS and JS optimized for production
+
+### Accessibility Testing
+![Lighthouse Accessibility](assets/images/lighthouse-accessibility.webp)
+- **WAVE Web Accessibility Evaluator** - No errors detected
+- **Lighthouse Accessibility Score** - 95+ on all pages
+- **Keyboard navigation** - All interactive elements accessible via keyboard
+- **Screen reader compatibility** - Tested with NVDA and VoiceOver
 
 ### Browser Compatibility
 - **Chrome** (latest) ✅
@@ -321,7 +332,7 @@ cd duplicate-co2clock
 
 ### Media
 - **Hero video** - CO₂ emissions visualization (royalty-free)
-- **Climate images** - Unsplash and Pexels (credited in alt text), chatgpt
+- **Climate images** - Unsplash and Pexels (credited in alt text)
 - **Icons** - Font Awesome 6.0+ icon library
 - **Flags** - FlagCDN for country flag images
 
