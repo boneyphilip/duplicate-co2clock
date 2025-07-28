@@ -206,8 +206,8 @@ The website features a complete user journey including a homepage with CO₂ sim
 
 **Overall Lighthouse Scores:**
 - 🚀 **Performance**: 90+ (Fast loading, optimized resources)
-- ♿ **Accessibility**: 95+ (Screen reader friendly, keyboard navigation)
-- 🔍 **SEO**: 95+ (Search engine optimized)
+- ♿ **Accessibility**: 90+ (Screen reader friendly, keyboard navigation)
+- 🔍 **SEO**: 90+ (Search engine optimized)
 - ✅ **Best Practices**: 90+ (Security, modern web standards)
 
 ### Validator Testing
