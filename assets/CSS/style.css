@@ -1560,7 +1560,7 @@ footer {
 
 /* === ABOUT band: image + white text (like your mockup) === */
 .about-hero{
-  background: url("assets/images/earth-system-science-asia-satellite.webp") center/cover no-repeat;
+  background: url("../images/polluted-city.jpg") center/cover no-repeat;
   position: relative;
   min-height: 420px;
 }
