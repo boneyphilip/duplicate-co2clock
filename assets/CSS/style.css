@@ -50,6 +50,11 @@
   --transition-speed: 0.3s;
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
+  /*  Section theming helpers (add at end) */
+
+  --light-bg: #EEEEEE;     /* light section background */
+  --ink-color: #222831;    /* text color on light bg */
+
 }
 
 /* ========================================================= 
@@ -1529,3 +1534,46 @@ footer {
   margin-bottom: 15px;
   transition: background-color 0.3s ease;
 }
+
+
+/* generic spacing */
+.section{ padding:64px 0; }
+
+/* dark section (default site look) */
+.theme-dark{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* light section (for the light bands) */
+.theme-light{
+  background-color: var(--light-bg);
+  color: var(--ink-color);
+}
+.theme-light a{ color:#006e73; }
+.theme-light a:hover{ color:#004f53; }
+
+/* hero video overlay little stronger for readability */
+#hero .hero-overlay{
+  background: linear-gradient(180deg, rgba(var(--bg-color-rgb), .50), rgba(var(--bg-color-rgb), .75));
+}
+
+/* === ABOUT band: image + white text (like your mockup) === */
+.about-hero{
+  background: url("assets/images/earth-system-science-asia-satellite.webp") center/cover no-repeat;
+  position: relative;
+  min-height: 420px;
+}
+.about-hero::before{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
+}
+.about-hero .container{ position:relative; z-index:1; }
+.about-hero .about-title{
+  font-weight: 800;
+  line-height: 1.06;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.about-hero .about-description{ color:#E9ECEF; max-width: 760px; }
