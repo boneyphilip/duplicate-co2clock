@@ -1604,7 +1604,8 @@ footer {
   .about-hero{
     min-height: 420px;
     padding: 56px 0;                 /* section spacing */
-    background-position: center 30%;  /* image framing */
+    background-position: center 30%;
+    margin: 8px 0 10px;  /* image framing */
   }
   .about-hero .about-title{
     margin-top: 12px;
