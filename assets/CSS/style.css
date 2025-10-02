@@ -448,19 +448,15 @@ body {
 /* ========================================================= 
    CLIMATE FACTS SECTION
 ========================================================= */
-.climate-facts-section {
-  background: var(--secondary-bg);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  max-height: 480px;
+.climate-facts-section{
+  background: rgba(57,62,70,.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(238,238,238,.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
 }
-
 .facts-header {
-  background: var(--accent-color);
+  background: linear-gradient(90deg, var(--accent-color), #00a1a8);
+  border-bottom: 1px solid rgba(0,0,0,.15);
   padding: 1rem;
   color: var(--bg-color);
 }
@@ -486,6 +482,7 @@ body {
   padding: 1rem;
   flex-grow: 1;
   overflow-y: auto;
+   border-bottom: 1px dashed rgba(238,238,238,.12);
 }
 
 .fact-item {
@@ -1564,6 +1561,7 @@ footer {
   position: relative;
   min-height: 420px;
   padding: 72px 0;
+  padding-top: 84px
 }
 .about-hero::before{
   content:""; position:absolute; inset:0;
@@ -1619,3 +1617,5 @@ footer {
     margin-top: 6px;
   }
 }
+
+
