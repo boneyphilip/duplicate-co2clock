@@ -42,8 +42,8 @@
   --success-color-rgb: 107, 203, 119;
 
   /* Typography */
-  --font-main: "lora",Barlow Condensed, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
-  --font-digit: "Courier New", Barlow, Monaco, Consolas, monospace;
+  --font-main: "lora", "Barlow Condensed", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+  --font-digit: "Courier New", "Barlow", Monaco, Consolas, monospace;
   /* Spacing and effects */
 
   --border-radius: 8px;
@@ -66,9 +66,10 @@ body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding-top: 56px; /* Account for fixed navbar */
+  padding-top: 0px; /* Account for fixed navbar */
   line-height: 1.6;
   letter-spacing: .7px;
+  overscroll-behavior-y: contain;
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -120,6 +121,20 @@ h1,h2,h3,.display-1,.display-2,.about-title{ font-family: var(--font-main);
 .navbar-nav .nav-link:hover {
   background-color: rgba(var(--accent-color-rgb), 0.1);
 }
+
+.navbar.sticky-top {
+  z-index: 1030;
+}
+
+@media (max-width: 991.98px){
+  .navbar-collapse {
+    background: rgba(0,0,0,.92);
+    backdrop-filter: blur(6px);
+    padding: .75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+}
+
 
 /* ========================================================= 
    HERO SECTION (Homepage)
@@ -251,6 +266,10 @@ h1,h2,h3,.display-1,.display-2,.about-title{ font-family: var(--font-main);
     transform-origin: 0% 100%;
     transform: scale(1, 0);
   }
+}
+
+@supports (height: 100dvh) {
+  #hero { min-height: 100dvh; }
 }
 
 /* ========================================================= 
@@ -1598,7 +1617,7 @@ footer {
   letter-spacing: .4px;
   line-height: 1.02;              /* tight like the mock */
   font-weight: 800;
-  font-size: clamp(6rem, 7vw, 4.6rem);
+  font-size: clamp(2.4rem, 7vw, 4.6rem);/* correct order: min, preferred, max */
   color: #ffffff;                 /* bright white */
   text-shadow: 0 2px 8px rgba(0,0,0,.25);
   margin: 0;                      /* no extra gap so it doesn’t collide */
@@ -1609,8 +1628,14 @@ footer {
 .about-hero .about-description{
   color: #f0f4f6;
   line-height: 1.55;
-  font-size: 1.2.rem;
+  font-size: 1.2rem;
   margin: 0;                      /* remove margin to keep alignment clean */
+}
+
+@media (max-width: 991.98px){
+  .about-hero .about-title{
+    margin: 8px 0 10px;
+  }
 }
 
 /* Makes paragraph column visually narrow like screenshot */
@@ -1625,7 +1650,7 @@ footer {
     min-height: 420px;
     padding: 56px 0;                 /* section spacing */
     background-position: center 30%;
-    margin: 8px 0 10px;  /* image framing */
+   /* margin: 8px 0 10px;  /* image framing */
   }
   .about-hero .about-title{
     margin-top: 12px;
