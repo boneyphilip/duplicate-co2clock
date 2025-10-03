@@ -523,7 +523,10 @@ h1,h2,h3,.display-1,.display-2,.about-title{ font-family: var(--font-main);
   margin-bottom: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+   align-items: center;         /* vertically center icon and text */
+  gap: 12px;                   /* a little more breathing room */
 }
+
 
 .fact-item:last-child {
   margin-bottom: 0;
@@ -532,16 +535,19 @@ h1,h2,h3,.display-1,.display-2,.about-title{ font-family: var(--font-main);
 }
 
 .fact-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 38px;
   background: var(--accent-color);
   border-radius: var(--border-radius);
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   color: var(--bg-color);
   font-size: 0.8rem;
   flex-shrink: 0;
+  place-items: center;
+  margin: 0; 
+  flex: 0 0 36px; 
 }
 
 .fact-heading {
@@ -901,18 +907,6 @@ footer {
     margin-top: 2rem;
   }
 
-  /* Fact Items - Center content on mobile */
-  .fact-item {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Fact Icon - Center */
-  .fact-icon {
-    margin: 0 auto 0.5rem auto; /* Center icon with bottom margin */
-  }
-
   /* Separator Line - Center and adjust width */
   .separator-line {
     width: 90%; /* Slightly narrower */
@@ -961,6 +955,10 @@ footer {
   .stat-item {
     padding: 0.75rem;
     max-width: 280px;
+    align-items: center;       /* keep center alignment on phones */
+  }
+  .fact-icon{
+    margin: 0;                 /* no extra top/bottom margins */
   }
 }
 
@@ -1017,6 +1015,59 @@ footer {
   
   .big-title {
     font-size: 5rem;
+  }
+}
+
+/* ============================================
+   FIX: Key Climate Facts icon/text alignment
+   (robust at ~540px and other breakpoints)
+   ============================================ */
+
+/* Each row is a flex row; vertically center icon + text */
+.facts-items .fact-item{
+  display: flex;           /* already present, restating for clarity */
+  align-items: center;     /* vertical centering of the two columns */
+  gap: 12px;               /* consistent spacing between icon and text */
+}
+
+/* Make the icon box a strict square and center its glyph */
+.facts-items .fact-icon{
+  flex: 0 0 36px;          /* fixed column width; never shrink/grow */
+  width: 36px;
+  height: 36px;
+  display: grid;           /* easiest way to perfectly center contents */
+  place-items: center;
+  background: var(--accent-color);
+  border-radius: var(--border-radius);
+  color: var(--bg-color);
+  margin: 0;               /* kill any residual margins */
+  line-height: 1;          /* avoid baseline drift if glyph is text-based */
+}
+
+/* Normalize common glyph types inside the icon box */
+.facts-items .fact-icon i,
+.facts-items .fact-icon svg{
+  display: block;
+  line-height: 1;          /* no extra baseline space */
+  height: 1em;             /* keep intrinsic size sane for many icon sets */
+}
+
+/* Make the text column center itself vertically as a block next to the icon */
+.facts-items .fact-item > :nth-child(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers heading + description within the row */
+  min-width: 0;            /* prevents weird wrapping push */
+}
+
+/* Optional: if you really want stacked layout ONLY on very small screens,
+   stack cleanly without re-introducing vertical misalignment. */
+@media (max-width: 480px){
+  .facts-items .fact-item{
+    align-items: flex-start; /* align tops when stacked looks better */
+  }
+  .facts-items .fact-item{
+    flex-wrap: nowrap;       /* keep icon left, text right */
   }
 }
 
@@ -1617,7 +1668,7 @@ footer {
   letter-spacing: .4px;
   line-height: 1.02;              /* tight like the mock */
   font-weight: 800;
-  font-size: clamp(2.4rem, 7vw, 4.6rem);/* correct order: min, preferred, max */
+  font-size: clamp(2.4rem, 7vw, 6.2rem);/* correct order: min, preferred, max */
   color: #ffffff;                 /* bright white */
   text-shadow: 0 2px 8px rgba(0,0,0,.25);
   margin: 0;                      /* no extra gap so it doesn’t collide */
