@@ -1644,7 +1644,7 @@ footer {
 
 /* hero video overlay little stronger for readability */
 #hero .hero-overlay{
-  background: linear-gradient(180deg, rgba(var(--bg-color-rgb), .50), rgba(var(--bg-color-rgb), .75));
+  background: linear-gradient(180deg, rgb(41, 65, 56), rgba(25, 236, 7, 0.13));
 }
 
 /* === ABOUT band: image + white text (like your mockup) === */
