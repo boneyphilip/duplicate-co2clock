@@ -1295,11 +1295,12 @@ footer {
   color: #FFD600 !important;  /* Or any yellow you like */
 }
 
+.table td .status-label { white-space: nowrap; }
 .status-label { font-weight: bold; }
 .status-label.critical { color: #ff5252 !important; }    /* Red for Critical */
 .status-label.high { color: #ffc107 !important; }        /* Amber for High Impact */
-.status-label.moderate { color: #00e676 !important; }    /* Green for Moderate */
-.status-label.low { color: #40c4ff !important; }         /* Blue for Low Impact */
+.status-label.moderate { color: #40c4ff !important; }    /* Green for Moderate */
+.status-label.low { color: #00e676 !important; }         /* Blue for Low Impact */
 
 .text-muted.text-white {
   color: #fff !important;

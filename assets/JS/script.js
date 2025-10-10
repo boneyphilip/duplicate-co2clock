@@ -160,28 +160,22 @@ function getTrendIcon(trend) {
 // FIXED: Removed duplicate return statements
 function createStatusBar(percent) {
   let barColor = 'bg-success';
-  let status = 'Low Impact';
-  
-  if (percent >= 10) {
-    barColor = 'bg-danger';
-    status = 'Critical';
-  } else if (percent >= 5) {
-    barColor = 'bg-warning';
-    status = 'High Impact';
-  } else if (percent >= 2) {
-    barColor = 'bg-info';
-    status = 'Moderate';
-  }
+  let statusText = 'Low Impact';
+  let statusClass = 'low';
+
+  if (percent >= 10) { barColor = 'bg-danger';  statusText = 'Critical';      statusClass = 'critical'; }
+  else if (percent >= 5) { barColor = 'bg-warning'; statusText = 'High Impact';  statusClass = 'high'; }
+  else if (percent >= 2) { barColor = 'bg-info';    statusText = 'Moderate';     statusClass = 'moderate'; }
 
   return `
     <div class="d-flex align-items-center">
-      <div class="progress flex-grow-1 me-2" style="height: 20px; width: 80px;">
-        <div class="progress-bar ${barColor}" role="progressbar" 
-             style="width: ${Math.min(percent * 3, 100)}%" 
+      <div class="progress me-2" style="height:20px; width:110px; flex:0 0 110px;">
+        <div class="progress-bar ${barColor}" role="progressbar"
+             style="width:${Math.min(percent * 3, 100)}%"
              title="${percent}% of global emissions">
         </div>
       </div>
-      <small class="text-muted">${status}</small>
+      <small class="status-label ${statusClass} fw-semibold flex-shrink-0">${statusText}</small>
     </div>
   `;
 }
