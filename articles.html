@@ -124,15 +124,25 @@
       </div>
     </div>
 
-    <!-- Pagination (optional) -->
-    <nav aria-label="Page navigation">
-      <ul class="pagination articles-pagination">
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </nav>
+    <!-- Pagination (disabled placeholders for now) -->
+<nav aria-label="Article pages">
+  <ul class="pagination articles-pagination">
+    <li class="page-item active">
+      <a class="page-link" href="#" aria-current="page">1</a>
+    </li>
+
+    <li class="page-item disabled">
+      <span class="page-link" tabindex="-1" aria-disabled="true">2</span>
+    </li>
+    <li class="page-item disabled">
+      <span class="page-link" tabindex="-1" aria-disabled="true">3</span>
+    </li>
+    <li class="page-item disabled">
+      <span class="page-link" tabindex="-1" aria-disabled="true">Next</span>
+    </li>
+  </ul>
+</nav>
+
   </main>
 
   <!-- ======= FOOTER ======= -->
