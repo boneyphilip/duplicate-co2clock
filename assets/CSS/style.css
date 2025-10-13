@@ -720,6 +720,58 @@ is changing
 .discovery-card:hover .card-arrow {
   transform: translateX(5px);
 }
+/* === FIX: keep card title from touching the arrow, all screens === */
+.discovery-card .card-content{
+  /* keep your original layout/look */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  z-index: 2;
+
+  /* make sure text and arrow don't fight for space */
+  display: block;          /* back to normal block flow */
+}
+
+.discovery-card .card-title{
+  /* your original style, plus space for the arrow */
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 .5rem 0;
+
+  /* this is the key line—gives the title some room on the right */
+  padding-right: 2.2rem;   /* ~35px, enough for the arrow */
+  word-break: break-word;  /* safe wrapping if needed */
+  position: relative;
+  z-index: 3;              /* sits above the overlay nicely */
+}
+
+.discovery-card .card-arrow{
+  /* lock the arrow to the bottom-right corner as before */
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  z-index: 3;
+  transition: transform .3s ease;
+}
+
+.discovery-card:hover .card-arrow{
+  transform: translateX(4px);
+}
+
+/* slightly smaller title on medium widths so it wraps nicer */
+@media (max-width: 1200px){
+  .discovery-card .card-title{
+    font-size: 1.55rem;
+    padding-right: 2rem;
+  }
+}
+
 
 /* ========================================================= 
    FOOTER STYLES
