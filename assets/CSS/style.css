@@ -1723,7 +1723,7 @@ footer {
   letter-spacing: .4px;
   line-height: 1.02;              /* tight like the mock */
   font-weight: 800;
-  font-size: clamp(2.4rem, 7vw, 6.4rem);/* correct order: min, preferred, max */
+  font-size: clamp(2.4rem, 7vw, 7.66rem);/* correct order: min, preferred, max */
   color: #ffffff;                 /* bright white */
   text-shadow: 0 2px 8px rgba(0,0,0,.25);
   margin: 0;                      /* no extra gap so it doesn’t collide */
@@ -1736,7 +1736,7 @@ footer {
 .about-hero .about-description{
   color: #f0f4f6;
   line-height: 1.55;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;                      /* remove margin to keep alignment clean */
 }
 
@@ -1748,7 +1748,7 @@ footer {
 
 /* Makes paragraph column visually narrow like screenshot */
 .about-hero .about-narrow{
-  max-width: 520px;
+  max-width: 480px;
   margin-top: 6px;
 }
 
