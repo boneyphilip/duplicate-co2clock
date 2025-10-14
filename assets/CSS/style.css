@@ -1748,7 +1748,7 @@ footer {
 
 /* Makes paragraph column visually narrow like screenshot */
 .about-hero .about-narrow{
-  max-width: 480px;
+  max-width: 560px;
   margin-top: 6px;
 }
 
