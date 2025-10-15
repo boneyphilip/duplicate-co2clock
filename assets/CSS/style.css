@@ -1369,9 +1369,9 @@ footer {
 }
 
 /* UTILITIES */
-.text-accent { color: #00adb5 !important; }
-.bg-accent { background-color: #00adb5 !important; }
-.border-accent { border-color: #00adb5 !important; }
+.text-accent { color: #00e6d2  !important; }
+.bg-accent { background-color: #00e6d2 !important; }
+.border-accent { border-color: #00e6d2 !important; }
 .error { border-color: #ff2e63 !important; background-color: rgba(255,46,99,0.1) !important; }
 .success { border-color: #6bcb77 !important; background-color: rgba(107,203,119,0.1) !important; }
 .loading { opacity: 0.5; pointer-events: none; }
