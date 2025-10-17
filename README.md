@@ -2,7 +2,15 @@
 
 ![CO₂ Clock Mockup](assets/images/mockup.webp)
 
-**[View Live Website](https://boneyphilip.github.io/duplicate-co2clock/)**
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Website-View%20Now-brightgreen)](https://boneyphilip.github.io/duplicate-co2clock/)
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![Chart.js](https://img.shields.io/badge/Chart.js-Interactive%20Charts-ff6384?logo=chartdotjs)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.6-563d7c?logo=bootstrap)
+
+> **A visual, interactive, and educational simulation of our planet’s rising CO₂ levels.**  
+> Built to make climate data simple, accessible, and impactful — for learners, educators, and environmental advocates alike. 🌱  
 
 ## About
 
@@ -13,28 +21,86 @@ This project aims to make climate data accessible and understandable for everyon
 The website features a complete user journey including a homepage with CO₂ simulation, comprehensive emissions dashboard, educational articles, project information, contact functionality, and a user-friendly thank you page for form submissions. The site targets environmentally conscious individuals, educators, students, and anyone interested in understanding the current state of our atmosphere and the steps we can take to address climate change.
 
 ---
+### Project Overview
 
-## Data Methodology
-
-### CO₂ Simulation
-- **Starting baseline**: Approximately 428 ppm based on recent atmospheric measurements
-- **Increment calculation**: Small increases applied every few seconds to simulate ongoing emissions
-- **Educational purpose**: Numbers represent realistic current atmospheric levels for learning
-
-### Emissions Data
-- **Static dataset**: 70 countries with emissions data stored in JavaScript arrays
-- **Data structure**: Each country includes rank, total emissions, per capita, percentage of global total
-- **Source basis**: Compiled from publicly available climate research and statistical sources
-- **Update method**: Manual updates to JavaScript files when new data becomes available
-
-### Charts and Visualizations
-- **Chart.js library**: Powers all interactive charts and graphs
-- **Data processing**: JavaScript functions sort, filter, and display information dynamically
-- **Real-time feel**: Updates happen instantly since data is locally stored
-
-*Note: This is an educational project using simulated and compiled data, not live API feeds*
+| Page | File | Description | Key Features |
+|------|------|--------------|---------------|
+| 🏠 Home | `index.html` | Displays live CO₂ counter and intro info. | Animated CO₂ ppm counter, navigation links |
+| 📊 Dashboard | `dash_board.html` | Data visualization of emissions. | Chart.js graphs, filter & sort |
+| 📚 Articles | `articles.html` | Educational content hub. | Climate articles, explanations |
+| ℹ️ About | `about.html` | Project purpose and background. | Data sources, mission |
+| ✉️ Contact | `contact.html` | User inquiry form (FormSubmit). | Name/email form, validation |
+| ✅ Thank You | `thank-you.html` | Confirmation after form submit. | Redirect and friendly message |
 
 ---
+
+## Data Methodology
+### 🔹 CO₂ Simulation
+- **Baseline:** Approximately 428 ppm based on recent atmospheric measurements.
+- **Increment calculation:** Small JS increments every few seconds to simulate rise.  
+- **Purpose:** Educational — demonstrates how atmospheric CO₂ continuously rises (no live data)
+```js
+let co2ppm = 428.01;
+setInterval(() => {
+  co2ppm += 0.0002;
+  document.getElementById("co2Value").textContent = co2ppm.toFixed(2);
+}, 3000);
+```
+> This approach allows users to visualize ongoing emissions trends even without an active API connection.
+
+
+### Emissions Data
+
+- **Static dataset**: 70 countries with emissions data stored in JavaScript arrays
+- **Data structure**: Each country includes rank, total emissions, per capita, percentage of global total
+  ```js
+  { country: "India", total: 2500, perCapita: 1.8, share: 7.1 }
+  ```
+- **Source basis**: Compiled from publicly available climate research and statistical sources (World Population Review, Global Carbon Atlas)
+- **Update method**: Manual updates to JavaScript files when new data becomes available
+
+
+### Charts and Visualizations
+- **Library**: Chart.js powers all interactive charts and graphs
+- **Purpose**: Create engaging bar and pie charts of CO₂ emissions
+- **Data processing**: JavaScript functions dynamically sort, filter, and display data
+- **Interactivity**: Hover tooltips and instant chart updates provide a real-time feel
+- **Data Source**: All information is loaded from local JavaScript arrays (no external API)
+
+*Note: This is an educational project using simulated and compiled data, not live API feeds.*
+
+---
+## System Architecture & Code Structure
+
+The project follows a modular, front-end-only architecture, built using pure HTML, CSS, and JavaScript.
+
+### Architecture Diagram
+```SCSS
+User Interface (HTML Pages)
+       │
+       ├── Styling Layer → (CSS / Bootstrap)
+       │
+       ├── Data Layer → (Static JavaScript Arrays)
+       │
+       ├── Visualization Layer → (Chart.js + Custom JS)
+       │
+       └── Interaction Layer → (Odometer.js, FormSubmit, DOM Events)
+```
+
+###  Folder Structure
+```bash
+📦 duplicate-co2clock
+ ┣ 📜 index.html            # Home - CO₂ tracker
+ ┣ 📜 dash_board.html       # Dashboard visualizations
+ ┣ 📜 articles.html         # Educational content
+ ┣ 📜 about.html            # Project background
+ ┣ 📜 contact.html          # Contact form
+ ┣ 📜 thank-you.html        # Confirmation screen
+ ┣ 📁 css/                  # All stylesheets
+ ┣ 📁 js/                   # Scripts (simulation, charts)
+ ┣ 📁 assets/               # Images, videos, icons
+ ┗ 📜 README.md             # Project documentation
+```
 
 ## Table of Contents
 
@@ -68,33 +134,76 @@ The website features a complete user journey including a homepage with CO₂ sim
 - I want to access new educational content about climate solutions
 - I want to use the interactive dashboard for research or presentations
 
-### Design
+###  Design
 
-#### Color Scheme
-- **Primary Background**: Dark charcoal (#222831) for a modern, professional look
-- **Accent Color**: Vibrant teal (#00adb5) for highlighting important data and CTAs
-- **Text Colors**: Light gray (#eeeeee) for optimal readability on dark backgrounds
-- **Status Colors**: 
-  - Success green (#6bcb77) for positive trends
-  - Warning amber (#f9ed69) for moderate concerns
-  - Danger red (#ff2e63) for critical alerts
+### Color Scheme
 
-#### Typography
-- **Primary Font**: Barlow Condensed for headings and data displays
-- **Body Text**: System fonts optimized for readability
-- **Data Display**: Monospace fonts for precise numerical information
+| **Purpose** | **Color Code** | **Description** |
+|--------------|----------------|-----------------|
+|  **Primary Background** | `#222831` | Deep dark charcoal used across all pages for a sleek, modern dark theme. |
+|  **Secondary Background** | `#393e46` | Medium gray for cards, dashboards, and section containers. |
+|  **Accent Color** | `#00e6d2` | Bright teal highlight for buttons, links, and data counters — represents clean energy and innovation. |
+|  **Border Color** | `#393e46` | Used for subtle dividers and element outlines to maintain structure without visual clutter. |
+|  **Primary Text** | `#eeeeee` | Light gray used for body text and headings to ensure strong readability on dark backgrounds. |
+| 🟢 **Success** | `#6bcb77` | Indicates positive trends or sustainable outcomes. |
+| 🟡 **Warning** | `#f9ed69` | Highlights cautionary or neutral data points. |
+| 🔴 **Danger** | `#ff2e63` | Used for critical alerts or negative environmental indicators. |
 
-#### Imagery
-- High-quality environmental photography
-- Scientific visualizations and charts
-- Iconography from Font Awesome for consistent UI elements
+> The visual identity is inspired by clean energy tones — teal and green hues contrast against the dark base to create a balance between urgency and optimism.
+
+---
+
+### Typography
+
+- **Primary Font:** `"Lora", "Barlow Condensed", system-ui, sans-serif`  
+  → Combines elegance (Lora) with modern readability (Barlow Condensed).  
+- **Numerical Display:** `"Courier New", "Barlow", Monaco, Consolas, monospace`  
+  → Used for CO₂ counters and dashboard metrics for a technical, digital aesthetic.  
+- **Readability Enhancements:**  
+  - Increased letter spacing (`0.7px`)  
+  - Line height (`1.6`) for better comfort on all screens  
+  - Font smoothing enabled for crisp rendering  
+
+---
+
+### Imagery & Visual Identity
+
+- **Hero Section:** Gradient overlays and animated teal accents symbolize continuous CO₂ growth and data flow.  
+- **Dashboard:** Transparent card backgrounds with blur and shadows create a futuristic “data visualization” environment.  
+- **About Section:** Uses `polluted-city.jpg` with a subtle green tint overlay — representing both pollution and hope for restoration.  
+- **Charts:** Interactive **Chart.js** visuals styled with the project’s color palette for consistency.  
+- **Icons:** Implemented via **Font Awesome 6** for unified and accessible iconography.  
+
+---
+
+### Layout & Responsiveness
+
+- **Framework:** Built with **Bootstrap 5.3.6** for a responsive grid and consistent spacing.  
+- **Approach:** *Mobile-first*, scaling fluidly to larger displays (up to 4K).  
+- **Core Layout Techniques:**  
+  - CSS Grid and Flexbox for adaptive component alignment  
+  - Smooth hover transitions (`0.3s ease`)  
+  - Rounded corners (`8px`) and layered shadows for depth  
+- **Section Themes:**  
+  - `.theme-dark` → Primary dark sections  
+  - `.theme-light` → Light contrast bands for visual balance  
+- **Accessibility:**  
+  - High contrast text  
+  - Keyboard-navigable components  
+  - Clear hierarchy optimized for screen readers  
+
+---
+
+### Design Summary
+
+> “CO₂ Clock” blends **data visualization with environmental storytelling** — a dark futuristic interface symbolizing current climate challenges, contrasted by bright teal elements representing *hope, innovation, and progress*.
 
 ---
 
 ## Features
 
 ### Real-Time CO₂ Tracker
-![CO₂ Display](assets/images/co2-display.webp)
+![CO₂ Display](assets/images/co2-display.gif)
 - **Simulated atmospheric CO₂ levels** displayed with animated digit counters
 - **Incremental updates** using JavaScript to simulate real-time changes
 - **Educational baseline** showing current approximate atmospheric levels
@@ -102,6 +211,7 @@ The website features a complete user journey including a homepage with CO₂ sim
 
 ### Interactive Navigation
 ![Navigation](assets/images/navigation.webp)
+![Mobile-Navigation](assets/images/mobile-navnar.webp)
 - **Responsive navigation bar** that works across all devices
 - **Smooth scrolling** between sections for improved user experience
 - **Active page indicators** to help users understand their current location
