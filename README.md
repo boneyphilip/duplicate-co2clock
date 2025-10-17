@@ -211,7 +211,9 @@ User Interface (HTML Pages)
 
 ### Interactive Navigation
 ![Navigation](assets/images/navigation.webp)
+
 ![Mobile-Navigation](assets/images/mobile-navnar.webp)
+
 - **Responsive navigation bar** that works across all devices
 - **Smooth scrolling** between sections for improved user experience
 - **Active page indicators** to help users understand their current location
