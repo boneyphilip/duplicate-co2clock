@@ -75,6 +75,7 @@ setInterval(() => {
 The project follows a modular, front-end-only architecture, built using pure HTML, CSS, and JavaScript.
 
 ### Architecture Diagram
+
 ```SCSS
 User Interface (HTML Pages)
        │
@@ -88,18 +89,22 @@ User Interface (HTML Pages)
 ```
 
 ###  Folder Structure
+
 ```bash
 📦 duplicate-co2clock
- ┣ 📜 index.html            # Home - CO₂ tracker
- ┣ 📜 dash_board.html       # Dashboard visualizations
- ┣ 📜 articles.html         # Educational content
- ┣ 📜 about.html            # Project background
- ┣ 📜 contact.html          # Contact form
- ┣ 📜 thank-you.html        # Confirmation screen
- ┣ 📁 css/                  # All stylesheets
- ┣ 📁 js/                   # Scripts (simulation, charts)
- ┣ 📁 assets/               # Images, videos, icons
- ┗ 📜 README.md             # Project documentation
+├── 📜 index.html #        🌍 Home – Real-time CO₂ simulation counter
+├── 📜 dash_board.html #   📊 Global emissions dashboard (Chart.js visualizations)
+├── 📜 about.html #        ℹ️ Project information, background, and data methodology
+├── 📜 articles.html #     📚 Educational content hub with climate insights
+├── 📜 contact.html #      ✉️ Contact form integrated via FormSubmit
+├── 📜 thank-you.html #    ✅ Confirmation page displayed after form submission
+├── 📁 assets/ #           🖼️ Central directory for all static resources
+│ ├── 📁 css/ #            🎨 Stylesheets for layout and responsive design
+│ ├── 📁 js/ #             ⚙️ JavaScript files controlling interactivity and data logic
+│ ├── 📁 images/ #         🧩 Optimized images, icons, and WebP assets
+│ └── 📁 articles/ #       📰 Static content and article data (Markdown / HTML)
+└── 📜 README.md #         🧾 Comprehensive documentation and project overview
+
 ```
 
 ## Table of Contents
